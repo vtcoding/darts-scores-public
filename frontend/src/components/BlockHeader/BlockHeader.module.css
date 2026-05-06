@@ -1,0 +1,18 @@
+.blockHeader {
+  display: grid;
+  grid-template-columns: min-content max-content max-content 1fr;
+  align-items: center;
+  gap: var(--gap-4);
+}
+
+@media screen and (max-width: 1279px) {
+  .blockHeader {
+    gap: var(--gap-3);
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .blockHeader {
+    gap: var(--gap-3);
+  }
+}

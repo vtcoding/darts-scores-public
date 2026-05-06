@@ -1,0 +1,263 @@
+{
+  "common": {
+    "welcomeBack": "Tervetuloa takaisin",
+    "logout": "Kirjaudu ulos",
+    "login": "Kirjaudu sisään",
+    "confirm": "Vahvista",
+    "cancel": "Peru",
+    "close": "Sulje",
+    "add": "Lisää",
+    "mode": "Pelimuoto",
+    "firstTo": "Ensimmäinen {{legs}} legiin",
+    "players": "Pelaajat",
+    "player": "Pelaaja",
+    "guest": "Vieras",
+    "account": "tili",
+    "statistics": "Tilastot",
+    "legsWon": "Legejä voitettu",
+    "remaining": "Jäljellä",
+    "threeDartAverage": "Kolmen tikan keskiarvo",
+    "firstNineDartsAverage": "Ensimmäisen yhdeksän tikan keskiarvo",
+    "checkoutPercentage": "Lopetusprosentti",
+    "dartsThrown": "Tikkoja heitetty",
+    "finishOn": "Lopetus numeroon",
+    "target": "Kohde",
+    "hitRate": "Osumaprosentti",
+    "modeAroundTheClock": "Around the clock",
+    "modeDoublesPractice": "Doubles practice",
+    "modeTriplesPractice": "Triples practice",
+    "undo": "Peru",
+    "endedAt": "Loppui"
+  },
+  "components": {
+    "sidebar": {
+      "home": "Koti",
+      "playMatch": "Pelaa ottelu",
+      "practice": "Harjoittele",
+      "statistics": "Tilastot",
+      "language": "Kieli"
+    },
+    "header": {
+      "goToMenu": "Valikkoon"
+    },
+    "hitRates": {
+      "title": "Sektorikohtainen osumaprosentti"
+    }
+  },
+  "pages": {
+    "login": {
+      "username": "Käyttäjätunnus",
+      "password": "Salasana",
+      "login": "Kirjaudu",
+      "register": "Rekisteröidy",
+      "backToLogin": "Takaisin kirjautumiseen",
+      "playOffline": "Pelaa offline-tilassa",
+      "confirmPassword": "Vahvista salasana",
+      "language": "Kieli",
+      "networkError": "Palvelimeen ei saada yhteyttä. Yritä myöhemmin uudelleen.",
+      "usernameAlreadyExists": "Käyttäjätunnus on jo olemassa",
+      "wrongUsernameOrPassword": "Väärä käyttäjätunnus tai salasana",
+      "tooManyAttempts": "Liian monta epäonnistunutta kirjautumisyritystä. Yritä uudelleen 5 minuutin kuluttua.",
+      "tooManyRegistrationAttempts": "Liian monta rekisteröitymisyritystä. Yritä uudelleen 1 tunnin kuluttua.",
+      "weakPassword": "Valitse vahvempi salasana",
+      "invalidUsername": "Käyttäjätunnus sisältää kiellettyjä sanoja",
+      "passwordsDontMatch": "Salasanat eivät täsmää",
+      "usernameRequired": "Käyttäjätunnus vaaditaan",
+      "usernameTooShort": "Käyttäjätunnuksen on oltava vähintään 3 merkkiä pitkä",
+      "usernameTooLong": "Käyttäjätunnuksen on oltava alle 20 merkkiä pitkä",
+      "usernameInvalidChars": "Käyttäjätunnus voi sisältää vain kirjaimia, numeroita, alaviivoja ja yhdysmerkkejä",
+      "passwordRequired": "Salasana vaaditaan",
+      "passwordTooShort": "Salasanan on oltava vähintään 8 merkkiä pitkä",
+      "passwordMissingLowercase": "Salasanan on sisällettävä vähintään yksi pieni kirjain",
+      "passwordMissingUppercase": "Salasanan on sisällettävä vähintään yksi iso kirjain",
+      "passwordMissingNumber": "Salasanan on sisällettävä vähintään yksi numero",
+      "passwordMissingSpecial": "Salasanan on sisällettävä vähintään yksi erikoismerkki",
+      "confirmPasswordRequired": "Vahvista salasanasi",
+      "passwordStrengthVeryWeak": "Erittäin heikko",
+      "passwordStrengthWeak": "Heikko",
+      "passwordStrengthFair": "Kohtalainen", 
+      "passwordStrengthGood": "Hyvä",
+      "passwordStrengthStrong": "Vahva",
+      "requirementLength": "Vähintään 8 merkkiä",
+      "requirementLowercase": "Yksi pieni kirjain",
+      "requirementUppercase": "Yksi iso kirjain",
+      "requirementNumber": "Yksi numero",
+      "requirementSpecial": "Yksi erikoismerkki",
+      "registrationSuccess": {
+        "title": "Rekisteröityminen onnistui",
+        "message": "Tilisi on luotu onnistuneesti! Kirjaudu sisään jatkaaksesi.",
+        "button": "Kirjaudu"
+      }
+    },
+    "home": {
+      "title": "Koti",
+      "welcomeTitle": "Tervetuloa Darts Scores-sovellukseen!",
+      "welcomeDesc": "Pelaa, harjoittele ja seuraa edistymistäsi Darts Scores-sovelluksella.",
+      "offlineMessage": "Olet offline-tilassa. Pelesi eivät tallennu tilastoihin. Kirjaudu sisään tallentaaksesi pelisi ja käyttääksesi tilastoja.",
+      "matchTitle": "Pelaa ottelu",
+      "matchDesc": "Pelaa 301, 501 tai 701.",
+      "practiceTitle": "Harjoittele",
+      "practiceDesc": "Harjoittele heittämistäsi Around the clock, Doubles training tai Triples training-peleillä.",
+      "statisticsTitle": "Tilastot",
+      "statisticsDesc": "Tarkastele tilastojasi ja seuraa edistymistäsi."
+    },
+    "matchSettings": {
+      "title": "Otteluasetukset",
+      "unfinishedTitle": "Sinulla on keskeneräinen ottelu!",
+      "unfinishedDesc": "Jos et pelaa otteluasi loppuun, se poistetaan kun aloitat uuden ottelun.",
+      "matchDetails": "Ottelun tiedot",
+      "continueUnfinished": "Jatka keskeneräistä ottelua",
+      "deleteMatch": "Poista ottelu",
+      "chooseMode": "Valitse pelimuoto",
+      "legs": "Legit",
+      "players": "Pelaajat",
+      "randomizeOrder": "Arvo aloitusjärjestys",
+      "randomize": "Arvo",
+      "startMatch": "Aloita uusi ottelu",
+      "deleteUnfinishedMatch": {
+        "title": "Poista ottelu",
+        "confirmationText": "Oletko varma että haluat poistaa tämän keskeneräisen ottelun? Tätä toimintoa ei voi perua.",
+        "cancel": "Peru",
+        "confirm": "Poista ottelu"
+      },
+      "addModal": {
+        "title": "Lisää pelaaja tai botti",
+        "player": "Pelaaja",
+        "playerName": "Pelaajan nimi",
+        "bot": "Botti",
+        "botLevel": "Botin taso",
+        "botWithLevel": "Botti (taso {{botLevel}})"
+      }
+    },
+    "practiceSettings": {
+      "title": "Harjoitusottelun asetukset",
+      "unfinishedTitle": "Sinulla on keskeneräinen harjoitusottelu!",
+      "unfinishedDesc": "Jos et pelaa harjoitusotteluasi loppuun, se poistetaan kun aloitat uuden harjoitusottelun.",
+      "continueUnfinished": "Jatka keskeneräistä harjoitusotteluaottelua",
+      "aroundTheClockTitle": "Pelaa Around the clock",
+      "aroundTheClockDesc": "Heitä kaikki sektorit läpi (1-20) ja lopeta sektoriin 25.",
+      "doublesTitle": "Pelaa Doubles practice",
+      "doublesDesc": "Heitä kaikki tuplat läpi (1-20).",
+      "triplesTitle": "Pelaa Triple practice",
+      "triplesDesc": "Heitä kaikki triplat läpi (1-20)."
+    },
+    "statistics": {
+      "title": "Tilastot",
+      "selectMode": "Valitse pelimuoto",
+      "modeMatch": "Ottelu",
+      "modeAroundTheClock": "Around the clock",
+      "modeDoublesPractice": "Doubles practice",
+      "modeTriplesPractice": "Triples practice",
+      "defaultStatMatch": "Kolmen tikan keskiarvo",
+      "defaultStatPractice": "Osumaprosentti",
+      "exportStatsButton": "Lataa tilastot JSON-muodossa",
+      "exportModal": {
+        "title": "Lataa tilastot",
+        "download": "Lataa"
+      },
+      "uploadStatsButton": "Tuo tilastot JSON-muodossa",
+      "uploadModal": {
+        "title": "Tuo tilastot",
+        "upload": "Tuo"
+      },
+      "deleteStatsButton": "Poista tilastot",
+      "deleteStatsModal": {
+        "title": "Oletko varma että haluat poistaa tilastosi ?",
+        "cancel": "Peru",
+        "delete": "Poista"
+      },
+      "general": {
+        "title": "Yleiset tilastot",
+        "threeDartAverage": "Kolmen tikan keskiarvo",
+        "firstNineDartsAverage": "Ensimmäisen yhdeksän tikan keskiarvo",
+        "checkoutPercentage": "Lopetusprosentti",
+        "totalHitRate": "Osumaprosentti"
+      },
+      "trend": {
+        "title": "Kehitys",
+        "daily": "Päivittäin",
+        "weekly": "Viikoittain",
+        "monthly": "Kuukausittain",
+        "yearly": "Vuosittain",
+        "selectStatistic": "Valitse tilasto",
+        "selectFrequency": "Valitse vaihteluväli"
+      },
+      "matches": {
+        "lastFive": "Viimeiset 5 ottelua",
+        "endedAt": "Loppui",
+        "players": "Pelaajat",
+        "viewAll": "Näytä kaikki ottelut",
+        "viewAllPracticeMatches": "Näytä kaikki harjoitusottelut",
+        "previous": "Edellinen",
+        "next": "Seuraava",
+        "currentPage": "Nykyinen sivu"
+      },
+      "matchModals": {
+        "firstTo": "Ensimmäisenä {{legs}} legiin - ",
+        "endedAt": "Loppui",
+        "threeDartAverage": "Kolmen tikan keskiarvo",
+        "firstNineDartsAverage": "Ensimmäisen yhdeksän tikan keskiarvo",
+        "checkoutPercentage": "Lopetusprosentti",
+        "dartsThrown": "Tikkoja heitetty",
+        "hitRate": "Osumaprosentti",
+        "deleteMatch": "Poista ottelu",
+        "close": "Sulje"
+      },
+      "statsTable": {
+        "average": "Kesk.",
+        "best": "Paras",
+        "worst": "Huonoin"
+      }
+    },
+    "matchesPage": {
+      "title": "Ottelut"
+    },
+    "match": {
+      "firstTo": "Ensimmäinen {{legs}} legiin",
+      "currentLeg": "Nykyinen legi",
+      "statsTitle": "Tilastot",
+      "threeDartAverageMatch": "3 tikan keskiarvo (ottelu)",
+      "threeDartAverageLeg": "3 tikan keskiarvo (legi)",
+      "dartsThrown": "Tikkoja heitetty",
+      "last score": "Viimeisin tulos",
+      "undo": "Peru",
+      "remaining": "Jäljellä",
+      "setScore": "Aseta tulos",
+      "submit": "Heitetty",
+      "clear": "Tyhjennä",
+      "doublesModal": {
+        "title": "Kuinka monta tikkaa käytetty tupliin?",
+        "submit": "Lähetä"
+      },
+      "matchFinishedModal": {
+        "title": "Ottelu päättynyt",
+        "winner": "Voittaja",
+        "stats": "Tilastot",
+        "legsWon": "Legejä voitettu",
+        "threeDartAverage": "3 tikan keskiarvo",
+        "checkoutPercentage": "Lopetusprosentti",
+        "dartsThrown": "Tikkoja heitetty",
+        "playAgain": "Pelaa uudestaan",
+        "quit": "Poistu",
+        "legBreakdown": "Eräkohtaiset tilastot",
+        "leg": "Erä",
+        "generalStats": "Ottelun tilastot"
+      }
+    },
+    "practiceMatch": {
+      "statsTitle": "Tilastot",
+      "dartsHit": "Tikkoja osuttu",
+      "hitRate": "Osumaprosentti",
+      "undo": "Peru",
+      "miss": "Ohi",
+      "practiceFinishedModal": {
+        "title": "Harjoitusottelu päättynyt",
+        "statsTitle": "Tilastot",
+        "dartsHit": "Tikkoja osuttu",
+        "hitRate": "Osumaprosentti",
+        "playAgain": "Pelaa uudestaan",
+        "quit": "Poistu"
+      }
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.deleteModal {
+  display: grid;
+  gap: var(--gap-4);
+}
+
+.confirmationText {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-normal);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-4);
+}
+
+@media screen and (max-width: 640px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+}

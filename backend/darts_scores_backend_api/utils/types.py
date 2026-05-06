@@ -1,0 +1,5 @@
+THREE_DART_AVERAGE = "threeDartAverage"
+FIRST_NINE_DARTS_AVERAGE = "firstNineDartsAverage"
+CHECKOUT_PERCENTAGE = "checkoutPercentage"
+HIT_RATE = "hitRate"
+SECTOR_HIT_RATES = "sectorHitRates"

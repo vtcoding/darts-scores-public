@@ -1,0 +1,21 @@
+.title {
+  font-size: var(--font-size-l);
+}
+
+.doubles {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--gap-3);
+}
+
+@media screen and (max-width: 1279px) {
+  .title {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .title {
+    font-size: var(--font-size-s);
+  }
+}

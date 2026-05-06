@@ -1,0 +1,19 @@
+.blockParagraph {
+  font-size: var(--font-size-m);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: var(--line-height-normal);
+  position: relative;
+  z-index: 1;
+}
+
+@media screen and (max-width: 1279px) {
+  .blockParagraph {
+    font-size: var(--font-size-s);
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .blockParagraph {
+    font-size: var(--font-size-xs);
+  }
+}

@@ -1,0 +1,230 @@
+.login {
+  display: grid;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  grid-template-columns: 1fr;
+  row-gap: var(--gap-7);
+  transform: translate(-50%, -50%);
+  width: 600px;
+  color: var(--color-text);
+  text-align: center;
+}
+
+.logo {
+  font-size: var(--font-size-xxl);
+}
+
+.form {
+  display: grid;
+  grid-template-columns: 1fr;
+  row-gap: var(--gap-4);
+}
+
+.loginInput {
+  outline: none;
+  border: 1px solid var(--color-hover-2);
+  border-radius: var(--radius-size-m);
+  background-color: transparent;
+  padding: var(--gap-4);
+  color: var(--color-text);
+  font-size: var(--font-size-l);
+}
+
+.errorInput {
+  border-color: var(--color-red);
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.fieldError {
+  color: var(--color-red);
+  font-size: var(--font-size-s);
+  text-align: left;
+  margin-top: calc(var(--gap-1) * -1);
+  margin-bottom: var(--gap-2);
+}
+
+.passwordRequirements {
+  margin-top: var(--gap-2);
+  padding: var(--gap-3);
+  background-color: var(--color-background-3);
+  border-radius: var(--radius-size-m);
+  border: 1px solid var(--color-hover-2);
+}
+
+.passwordStrengthBar {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+  margin-bottom: var(--gap-3);
+}
+
+.passwordStrengthFill {
+  flex: 1;
+  height: 6px;
+  background-color: var(--color-hover-2);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.passwordStrengthProgress {
+  height: 100%;
+  transition: width 0.3s ease, background-color 0.3s ease;
+  border-radius: 3px;
+}
+
+.passwordStrengthText {
+  font-size: var(--font-size-s);
+  color: var(--color-text);
+  white-space: nowrap;
+  min-width: 80px;
+}
+
+.requirementList {
+  display: grid;
+  gap: var(--gap-1);
+}
+
+.requirement {
+  font-size: var(--font-size-s);
+  color: var(--color-text);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: var(--gap-1);
+}
+
+.requirement::before {
+  content: "○";
+  font-size: var(--font-size-s);
+  opacity: 0.5;
+}
+
+.requirement.met {
+  opacity: 1;
+  color: var(--color-green);
+}
+
+.requirement.met::before {
+  content: "✓";
+  opacity: 1;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-4);
+  margin-bottom: var(--gap-4);
+}
+
+.buttons > .offlineButton {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+.offlineButton {
+  margin-top: var(--gap-2);
+}
+
+.languageSelector {
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+.languageSelector :global(.dropdown) {
+  width: 100%;
+}
+
+.languageSelector :global(.select) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+  cursor: pointer;
+  border: 1px solid var(--color-hover-2);
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-3);
+  padding: var(--gap-4);
+  color: var(--color-text);
+}
+
+.languageSelector :global(.select:hover) {
+  background-color: var(--color-hover-2);
+}
+
+.languageSelector :global(.menu) {
+  margin-top: var(--gap-2);
+  border: 1px solid var(--color-hover-2);
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-3);
+  overflow: hidden;
+}
+
+.languageSelector :global(.menuOption) {
+  transition: background-color 0.2s;
+  cursor: pointer;
+  padding: var(--gap-3) var(--gap-4);
+}
+
+.languageSelector :global(.menuOption:hover) {
+  background-color: var(--color-hover-2);
+}
+
+.languages {
+  display: grid;
+  grid-template-columns: 130px min-content min-content;
+  justify-self: center;
+  gap: var(--gap-3);
+  padding: var(--gap-4);
+  color: var(--color-text);
+  text-align: center;
+}
+
+.languageTitle {
+  display: grid;
+  align-items: center;
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-3);
+  text-align: center;
+}
+
+.language {
+  justify-self: center;
+  opacity: 0.4;
+  cursor: pointer;
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-3);
+  padding: 10px;
+  height: 40px;
+}
+
+.language.selected {
+  opacity: 1;
+}
+
+.error {
+  color: var(--color-red);
+  font-size: var(--font-size-l);
+}
+
+@media screen and (max-width: 1279px) {
+  .loginInput,
+  .error {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .login {
+    padding: calc(var(--gap-7) / 2);
+    width: calc(100% - var(--gap-7));
+  }
+
+  .loginInput,
+  .error {
+    font-size: var(--font-size-s);
+  }
+}

@@ -1,0 +1,4 @@
+.confirmDeleteMatchModal {
+  display: grid;
+  row-gap: var(--gap-4);
+}

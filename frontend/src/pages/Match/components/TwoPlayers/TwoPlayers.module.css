@@ -1,0 +1,106 @@
+.players {
+  color: #FFF;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-3);
+}
+
+.scoreAndStats {
+  align-content: center;
+  background-color: var(--color-background-3);
+  border-radius: var(--radius-size-m);
+  color: var(--color-text);
+  display: grid;
+  grid-template-rows: min-content min-content;
+  grid-template-columns: 1fr;
+  height: 100%;
+  justify-self: center;
+  row-gap: var(--gap-4);
+  width: 100%;
+}
+
+.inactive {
+  opacity: var(--opacity-disabled);
+}
+
+.scoreWrapper {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  align-content: center;
+  justify-content: center;
+  text-align: center;
+  row-gap: var(--gap-2);
+}
+
+.playerName {
+  background-color: var(--color-blue);
+  border-radius: var(--radius-size-m);
+  font-size: var(--font-size-s);
+  font-weight: 600;
+  padding: var(--gap-1) var(--gap-2);
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.legWins {
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-green);
+  font-weight: 600;
+  text-align: center;
+}
+
+.scoreValue {
+  font-weight: 800;
+  font-size: var(--font-size-xxxxxxl);
+  text-align: center;
+}
+
+.statsWrapper {
+  text-align: center;
+}
+
+.statLabel {
+  font-size: var(--font-size-s);
+}
+
+.statValue {
+  font-size: var(--font-size-m);
+  font-weight: 600;
+}
+
+/* Tablet */
+@media screen and (max-width: 1024px) {
+  .scoreAndStats {
+    width: 100%;
+  }
+
+  .scoreValue {
+    font-size: var(--font-size-xxxxxl);
+  }
+
+  .statLabel {
+    font-size: var(--font-size-xs);
+  }
+
+  .statValue {
+    font-size: var(--font-size-s);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .scoreValue {
+    font-size: var(--font-size-xxxxl);
+  }
+
+  .statLabel {
+    font-size: var(--font-size-xxs);
+  }
+
+  .statValue {
+    font-size: var(--font-size-xs);
+  }
+}
+

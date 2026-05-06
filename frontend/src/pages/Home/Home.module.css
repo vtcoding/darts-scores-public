@@ -1,0 +1,412 @@
+/* Main content container */
+:global(.pageContent) > *:not(:last-child) {
+  margin-bottom: var(--gap-4);
+}
+
+/* Games grid container with asymmetric layout */
+.games {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-3);
+}
+
+/* Featured game block (first one) */
+.games > .block:first-child {
+  grid-column: 1;
+  position: relative;
+  background: linear-gradient(135deg, var(--color-background-3), rgba(125, 92, 196, 0.3));
+  overflow: hidden;
+}
+
+.games > .block:first-child::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+}
+
+/* Secondary game block */
+.games > .block:nth-child(2) {
+  background: linear-gradient(135deg, rgba(77, 53, 115, 0.9), rgba(93, 66, 142, 0.9));
+}
+
+/* Logo styles with enhanced typography */
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin: var(--gap-7) 0 var(--gap-8);
+  position: relative;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: var(--font-size-xxxl);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.logo::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 120%;
+  background: radial-gradient(circle, rgba(123, 104, 238, 0.1) 0%, transparent 70%);
+  z-index: -1;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; transform: translate(-50%, -50%) scale(1); }
+  50% { opacity: 0.6; transform: translate(-50%, -50%) scale(1.1); }
+}
+
+.logoDarts {
+  background: linear-gradient(135deg, #fff, #b19cd9);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.logoScores {
+  background: linear-gradient(135deg, #7b68ee, #9b84d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+/* Remove any additional margins from blocks */
+.block {
+  margin: 0 !important;
+}
+
+/* Enhanced welcome block with glass morphism */
+.welcomeBlock > .block {
+  padding: var(--gap-5);
+  background: linear-gradient(135deg, rgba(77, 53, 115, 0.95), rgba(93, 66, 142, 0.95));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.welcomeBlock > .block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  animation: shimmer 3s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% { left: -100%; }
+  50% { left: 100%; }
+  100% { left: 100%; }
+}
+
+.userBlock {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-4);
+  width: 100%;
+}
+
+/* Enhanced user initial with gradient border */
+.userInitial {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--radius-size-full);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-hover));
+  aspect-ratio: 1;
+  width: 4em;
+  min-width: 4em;
+  height: 4em;
+  color: white;
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 1;
+  position: relative;
+  box-shadow: 0 4px 16px rgba(123, 104, 238, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.userInitial:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(123, 104, 238, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+.userInitial::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: var(--radius-size-full);
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-hover));
+  z-index: -1;
+}
+
+.userInfo {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--gap-2);
+  min-height: 4em;
+  position: relative;
+  z-index: 1;
+}
+
+.welcomeLine {
+  margin-bottom: 0.1rem;
+  line-height: 1.1;
+}
+
+.welcomeText {
+  display: block;
+  color: var(--color-text-secondary);
+  font-weight: 400;
+  font-size: var(--font-size-m);
+}
+
+.username {
+  margin: 0.2rem 0 0.4rem;
+  background: linear-gradient(135deg, #fff, #e8e8e8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  line-height: 1.1;
+  letter-spacing: -0.01em;
+}
+
+/* Enhanced average container with glass effect */
+.averageContainer {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+  border-radius: var(--radius-size-m);
+  background: linear-gradient(135deg, rgba(45, 27, 61, 0.8), rgba(61, 40, 88, 0.8));
+  backdrop-filter: blur(5px);
+  padding: 0.5rem var(--gap-3);
+  width: fit-content;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+.averageContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+}
+
+.averageLabel {
+  color: var(--color-text-secondary);
+  font-size: var(--font-size-xs);
+}
+
+.averageValue {
+  background: linear-gradient(135deg, #b19cd9, #9b84d1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: var(--font-size-s);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced game blocks with modern design */
+.games > .block {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: var(--radius-size-m);
+  background: linear-gradient(135deg, var(--color-background-3), rgba(93, 66, 142, 0.9));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.games > .block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.games > .block:hover::before {
+  opacity: 1;
+}
+
+/* Accent borders for different game types */
+.games > .block:first-child {
+  border-left: 4px solid var(--color-green);
+}
+
+.games > .block:nth-child(2) {
+  border-left: 4px solid var(--color-blue);
+}
+
+/* Icon container enhancements */
+.games .blockHeader {
+  position: relative;
+  z-index: 1;
+}
+
+.games .blockHeader svg {
+  font-size: 2rem;
+  transition: transform 0.3s ease;
+}
+
+.games > .block:hover .blockHeader svg {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* Enhanced block header spacing and typography */
+.blockHeader {
+  gap: var(--gap-3);
+  position: relative;
+}
+
+.blockHeader .title {
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
+
+/* Tablet and up with asymmetric grid */
+@media screen and (min-width: 768px) {
+  .games {
+    grid-template-columns: 1.5fr 1fr;
+    grid-template-rows: auto;
+  }
+  
+  .games > .block:first-child {
+    grid-row: 1 / 3;
+  }
+  
+  .logo {
+    font-size: var(--font-size-xxxxl);
+  }
+}
+
+/* Desktop enhancements */
+@media screen and (min-width: 1024px) {
+  .games {
+    gap: var(--gap-3);
+  }
+  
+  .games > .block {
+    padding: var(--gap-5);
+  }
+  
+  .welcomeBlock > .block {
+    padding: var(--gap-5);
+  }
+}
+
+/* Enhanced offline message styling */
+.offlineMessage {
+  background: linear-gradient(135deg, rgba(231, 76, 60, 0.1), rgba(192, 57, 43, 0.1));
+  border: 1px solid rgba(231, 76, 60, 0.3);
+  border-radius: var(--radius-size-m);
+  padding: var(--gap-3);
+  margin-bottom: var(--gap-3);
+  color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(5px);
+  position: relative;
+  z-index: 1;
+}
+
+/* Enhanced login button */
+.logInButton {
+  background: linear-gradient(135deg, var(--color-blue), var(--color-blue-hover));
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(123, 104, 238, 0.3);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+}
+
+.logInButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(123, 104, 238, 0.5);
+  background: linear-gradient(135deg, var(--color-blue-hover), var(--color-blue));
+}
+
+/* Statistics block special styling */
+.games ~ .block {
+  background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(155, 132, 209, 0.1));
+  border-left: 4px solid var(--color-green);
+  position: relative;
+  overflow: hidden;
+}
+
+.games ~ .block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 30%, rgba(177, 156, 217, 0.05) 50%, transparent 70%);
+  animation: statisticsShimmer 4s ease-in-out infinite;
+}
+
+@keyframes statisticsShimmer {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Loading state enhancement */
+.averageValue:empty::before {
+  content: '...';
+  display: inline-block;
+  animation: loadingPulse 1.5s ease-in-out infinite;
+}
+
+@keyframes loadingPulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+/* Large desktop */
+@media screen and (min-width: 1440px) {
+  .games {
+    grid-template-columns: 1.8fr 1fr;
+  }
+}

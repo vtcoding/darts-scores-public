@@ -1,0 +1,242 @@
+.modeAndLegs {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap-4);
+  margin-bottom: var(--gap-4);
+}
+
+.mode,
+.legs {
+  display: grid;
+  row-gap: var(--gap-3);
+}
+
+.legsSelector {
+  display: flex;
+  align-items: center;
+  border: 1px solid var(--color-background-4);
+  border-radius: var(--radius-size-m);
+  background-color: transparent;
+  height: 44px;
+  overflow: hidden;
+  width: fit-content;
+  min-width: 148px;
+}
+
+.legsButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  color: var(--color-text);
+}
+
+.legsButton:hover:not(:disabled) {
+  background-color: var(--color-background-4);
+}
+
+.legsButton:disabled {
+  opacity: var(--opacity-disabled);
+  cursor: not-allowed;
+}
+
+.legsButton svg {
+  font-size: var(--font-size-l);
+}
+
+.legsValue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 60px;
+  height: 100%;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  border-left: 1px solid var(--color-background-4);
+  border-right: 1px solid var(--color-background-4);
+}
+
+.players {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--gap-4);
+  margin-bottom: var(--gap-4);
+}
+
+.player {
+  display: inline-flex;
+  position: relative;
+  align-items: center;
+  gap: var(--gap-3);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease,
+    opacity 0.2s ease;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-4);
+  padding: 0 var(--gap-4);
+  min-height: 44px;
+  white-space: nowrap;
+  cursor: move;
+}
+
+.player:hover {
+  border-color: var(--color-hover-4);
+}
+
+.player.dragOver {
+  border-color: var(--color-primary);
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+  transform: scale(1.02);
+}
+
+.playerName {
+  margin: 0;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-normal);
+}
+
+.remove {
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-red);
+  border-radius: 50%;
+  background: var(--color-red);
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.remove:hover {
+  border-color: var(--color-red-hover);
+  background: var(--color-red-hover);
+}
+
+.add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+  border: 1px solid var(--color-hover-4);
+  border-radius: var(--radius-size-m);
+  background-color: transparent;
+  padding: 0 var(--gap-4);
+  min-width: 44px;
+  height: 44px;
+  color: var(--color-text);
+}
+
+.add:hover {
+  background-color: var(--color-background-4);
+}
+
+.add svg {
+  font-size: var(--font-size-l);
+}
+
+.addDisabled {
+  opacity: var(--opacity-disabled);
+  pointer-events: none;
+}
+
+.randomizeContainer {
+  margin-bottom: var(--gap-4);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-2);
+  cursor: pointer;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-normal);
+}
+
+.checkbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  appearance: none;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-size-s);
+  background-color: var(--color-background-4);
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.checkbox:hover {
+  border-color: var(--color-hover-4);
+}
+
+.checkbox:checked {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+}
+
+.checkbox:checked::after {
+  content: '';
+  position: absolute;
+  top: 2px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 480px) {
+  .modeAndLegs {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .playerName {
+    font-size: var(--font-size-s);
+  }
+
+  .add {
+    font-size: var(--font-size-s);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .modeAndLegs {
+    grid-template-columns: 1fr;
+  }
+
+  .playerName {
+    font-size: var(--font-size-xs);
+  }
+
+  .add {
+    font-size: var(--font-size-xs);
+  }
+}

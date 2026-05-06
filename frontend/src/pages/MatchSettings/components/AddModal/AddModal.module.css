@@ -1,0 +1,72 @@
+.addModal {
+  display: grid;
+  gap: var(--gap-4);
+}
+
+.playerInput {
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  outline: none;
+  border: 1px solid var(--color-background-4);
+  border-radius: var(--radius-size-m);
+  background-color: transparent;
+  padding: var(--gap-3) var(--gap-4);
+  width: 100%;
+  height: 44px;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+}
+
+.playerInput:focus {
+  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.2);
+  border-color: var(--color-primary);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--gap-4);
+}
+
+.button {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border-radius: var(--radius-size-m);
+  padding: var(--gap-3) var(--gap-4);
+  height: 44px;
+  font-weight: 500;
+  font-size: var(--font-size-m);
+}
+
+.primaryButton {
+  border: 1px solid var(--color-primary);
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.primaryButton:hover {
+  border-color: var(--color-primary-hover);
+  background-color: var(--color-primary-hover);
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-hover-4);
+  background-color: transparent;
+  color: var(--color-text);
+}
+
+.secondaryButton:hover {
+  background-color: var(--color-hover-4);
+}
+
+@media screen and (max-width: 640px) {
+  .buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .playerInput {
+    font-size: var(--font-size-s);
+  }
+}

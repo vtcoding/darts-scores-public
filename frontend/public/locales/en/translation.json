@@ -1,0 +1,263 @@
+{
+  "common": {
+    "welcomeBack": "Welcome back",
+    "logout": "Logout",
+    "login": "Login",
+    "confirm": "Confirm",
+    "cancel": "Cancel",
+    "close": "Close",
+    "add": "Add",
+    "mode": "Mode",
+    "firstTo": "First to {{legs}} legs",
+    "players": "Players",
+    "player": "Player",
+    "guest": "Guest",
+    "account": "account",
+    "statistics": "Statistics",
+    "legsWon": "Legs won",
+    "remaining": "Remaining",
+    "threeDartAverage": "Three dart average",
+    "firstNineDartsAverage": "First nine darts average",
+    "checkoutPercentage": "Checkout percentage",
+    "dartsThrown": "Darts thrown",
+    "finishOn": "Finish on",
+    "target": "Target",
+    "hitRate": "Hit rate",
+    "modeAroundTheClock": "Around the clock",
+    "modeDoublesPractice": "Doubles practice",
+    "modeTriplesPractice": "Triples practice",
+    "undo": "Undo",
+    "endedAt": "Ended at"
+  },
+  "components": {
+    "sidebar": {
+      "home": "Home",
+      "playMatch": "Play match",
+      "practice": "Practice",
+      "statistics": "Statistics",
+      "language": "Language"
+    },
+    "header": {
+      "goToMenu": "Go to menu"
+    },
+    "hitRates": {
+      "title": "Hit rates per sector"
+    }
+  },
+  "pages": {
+    "login": {
+      "username": "Username",
+      "password": "Password",
+      "login": "Login",
+      "register": "Register",
+      "backToLogin": "Back to login",
+      "playOffline": "Play Offline",
+      "confirmPassword": "Confirm password",
+      "language": "Language",
+      "networkError": "Unable to connect to the server. Please try again later.",
+      "usernameAlreadyExists": "Username already exists",
+      "wrongUsernameOrPassword": "Wrong username or password",
+      "tooManyAttempts": "Too many failed login attempts. Please try again in 5 minutes.",
+      "tooManyRegistrationAttempts": "Too many registration attempts. Please try again in 1 hour.",
+      "weakPassword": "Please choose a stronger password",
+      "invalidUsername": "Username contains restricted words",
+      "passwordsDontMatch": "Passwords don't match",
+      "usernameRequired": "Username is required",
+      "usernameTooShort": "Username must be at least 3 characters",
+      "usernameTooLong": "Username must be less than 20 characters",
+      "usernameInvalidChars": "Username can only contain letters, numbers, underscores and hyphens",
+      "passwordRequired": "Password is required",
+      "passwordTooShort": "Password must be at least 8 characters",
+      "passwordMissingLowercase": "Password must contain at least one lowercase letter",
+      "passwordMissingUppercase": "Password must contain at least one uppercase letter",
+      "passwordMissingNumber": "Password must contain at least one number",
+      "passwordMissingSpecial": "Password must contain at least one special character",
+      "confirmPasswordRequired": "Please confirm your password",
+      "passwordStrengthVeryWeak": "Very Weak",
+      "passwordStrengthWeak": "Weak", 
+      "passwordStrengthFair": "Fair",
+      "passwordStrengthGood": "Good",
+      "passwordStrengthStrong": "Strong",
+      "requirementLength": "At least 8 characters",
+      "requirementLowercase": "One lowercase letter",
+      "requirementUppercase": "One uppercase letter", 
+      "requirementNumber": "One number",
+      "requirementSpecial": "One special character",
+      "registrationSuccess": {
+        "title": "Registration Successful",
+        "message": "Your account has been created successfully! Please login to continue.",
+        "button": "Login"
+      }
+    },
+    "home": {
+      "title": "Home",
+      "welcomeTitle": "Welcome to Darts Scores!",
+      "welcomeDesc": "Play, practice and track your progress.",
+      "offlineMessage": "You are in Offline mode. Your matches will not be saved to statistics. Log in to save your matches and use statistics.",
+      "matchTitle": "Play match",
+      "matchDesc": "Play 301, 501 or 701.",
+      "practiceTitle": "Practice",
+      "practiceDesc": "Practice your throwing with Around the clock, Doubles training or Triples training.",
+      "statisticsTitle": "Statistics",
+      "statisticsDesc": "View your practice statistics and track your progress."
+    },
+    "matchSettings": {
+      "title": "Match settings",
+      "unfinishedTitle": "Unfinished Match",
+      "unfinishedDesc": "You have an unfinished match in progress. You can continue playing or start a new game.",
+      "matchDetails": "Match details",
+      "continueUnfinished": "Continue Unfinished Match",
+      "deleteMatch": "Delete Match",
+      "chooseMode": "Choose mode",
+      "legs": "Legs",
+      "players": "Players",
+      "randomizeOrder": "Randomize start order",
+      "randomize": "Randomize",
+      "startMatch": "Start new match",
+      "deleteUnfinishedMatch": {
+        "title": "Delete Match",
+        "confirmationText": "Are you sure you want to delete this unfinished match? This action cannot be undone.",
+        "cancel": "Cancel",
+        "confirm": "Delete Match"
+      },
+      "addModal": {
+        "title": "Add player or bot",
+        "player": "Player",
+        "playerName": "Player name",
+        "bot": "Bot",
+        "botLevel": "Bot level",
+        "botWithLevel": "Bot (level {{botLevel}})"
+      }
+    },
+    "practiceSettings": {
+      "title": "Practice settings",
+      "unfinishedTitle": "You have an unfinished practice match!",
+      "unfinishedDesc": "If you don't finish your practice match, it will be deleted once you start a new one.",
+      "continueUnfinished": "Continue unfinished practice match",
+      "aroundTheClockTitle": "Play Around the clock",
+      "aroundTheClockDesc": "Go through each sector (1-20) and finish with single bull.",
+      "doublesTitle": "Play Doubles practice",
+      "doublesDesc": "Go through each double (1-20).",
+      "triplesTitle": "Play Triples practice",
+      "triplesDesc": "Go through each triple (1-20)."
+    },
+    "statistics": {
+      "title": "Statistics",
+      "selectMode": "Select mode",
+      "modeMatch": "Match",
+      "modeAroundTheClock": "Around the clock",
+      "modeDoublesPractice": "Doubles practice",
+      "modeTriplesPractice": "Triples practice",
+      "defaultStatMatch": "Three dart average",
+      "defaultStatPractice": "Hit rate",
+      "exportStatsButton": "Export statistics as JSON",
+      "exportModal": {
+        "title": "Download stats",
+        "download": "Download"
+      },
+      "uploadStatsButton": "Upload statistics as JSON",
+      "uploadModal": {
+        "title": "Upload stats",
+        "upload": "Upload"
+      },
+      "deleteStatsButton": "Delete statistics",
+      "deleteStatsModal": {
+        "title": "Are you sure you want to delete your statistics?",
+        "cancel": "Cancel",
+        "delete": "Delete"
+      },
+      "general": {
+        "title": "General statistics",
+        "threeDartAverage": "Three dart average",
+        "firstNineDartsAverage": "First nine darts average",
+        "checkoutPercentage": "Checkout percentage",
+        "totalHitRate": "Total hit rate"
+      },
+      "trend": {
+        "title": "Trend",
+        "daily": "Daily",
+        "weekly": "Weekly",
+        "monthly": "Monthly",
+        "yearly": "Yearly",
+        "selectStatistic": "Select statistic",
+        "selectFrequency": "Select frequency"
+      },
+      "matches": {
+        "lastFive": "Last 5 matches",
+        "endedAt": "Ended at",
+        "players": "Players",
+        "viewAll": "View all matches",  
+        "viewAllPracticeMatches": "View all practice matches",
+        "previous": "Previous",
+        "next": "Next",
+        "currentPage": "Current page"
+      },  
+      "matchModals": {
+        "firstTo": "First to {{legs}} leg - ",
+        "endedAt": "Ended at",
+        "threeDartAverage": "Three dart average",
+        "firstNineDartsAverage": "First nine darts average",
+        "checkoutPercentage": "Checkout percentage",
+        "dartsThrown": "Darts thrown",
+        "hitRate": "Hit rate",
+        "deleteMatch": "Delete match",
+        "close": "Close"
+      },
+      "statsTable": {
+        "average": "Avg",
+        "best": "Best",
+        "worst": "Worst"
+      }
+    },
+    "matchesPage": {
+      "title": "Matches"
+    },
+    "match": {
+      "firstTo": "First to {{legs}} leg",
+      "currentLeg": "Current leg",
+      "statsTitle": "Statistics",
+      "threeDartAverageMatch": "3 dart average (match)",
+      "threeDartAverageLeg": "3 dart average (leg)",
+      "dartsThrown": "Darts thrown",
+      "lastScore": "Last score",
+      "undo": "Undo",
+      "remaining": "Remaining",
+      "setScore": "Set a score",
+      "submit": "Thrown",
+      "clear": "Clear",
+      "doublesModal": {
+        "title": "How many darts used on doubles?",
+        "submit": "Submit"
+      },
+      "matchFinishedModal": {
+        "title": "Match finished",
+        "winner": "Winner",
+        "stats": "Statistics",
+        "legsWon": "Legs won",
+        "threeDartAverage": "3 dart average",
+        "checkoutPercentage": "Checkout percentage",
+        "dartsThrown": "Darts thrown",
+        "playAgain": "Play again",
+        "quit": "Quit",
+        "legBreakdown": "Leg breakdown",
+        "leg": "Leg",
+        "generalStats": "Match statistics"
+      }
+    },
+    "practiceMatch": {
+      "statsTitle": "Statistics",
+      "dartsHit": "Darts hit",
+      "hitRate": "Hit rate",
+      "undo": "Undo",
+      "miss": "Miss",
+      "practiceFinishedModal": {
+        "title": "Practice finished",
+        "statsTitle": "Statistics",
+        "dartsHit": "Darts hit",
+        "hitRate": "Hit rate",
+        "playAgain": "Play again",
+        "quit": "Quit"
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.dropdown {
+  display: grid;
+  position: relative;
+  grid-template-columns: 1fr;
+  font-size: var(--font-size-m);
+  line-height: var(--line-height-normal);
+}
+
+.select {
+  display: grid;
+  grid-template-columns: 1fr min-content;
+  align-items: center;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+  box-sizing: border-box;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-size-m);
+  background-color: var(--color-background-4);
+  padding: 0 var(--gap-4);
+  width: 100%;
+  height: 44px;
+  color: var(--color-text);
+}
+
+.select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.2);
+  border-color: var(--color-primary);
+}
+
+.select.opened {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.menu {
+  display: grid;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  grid-template-columns: 1fr;
+  z-index: 9999;
+  width: 100%;
+}
+
+.selectedText {
+  overflow: hidden;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: var(--font-size-m);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.optionText {
+  overflow: hidden;
+  color: var(--color-text);
+  font-size: var(--font-size-m);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.menuOption {
+  display: grid;
+  align-items: center;
+  transition: background-color 0.2s ease;
+  cursor: pointer;
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
+  background-color: var(--color-background-4);
+  padding: 0 var(--gap-4);
+  min-height: 44px;
+  color: var(--color-text);
+}
+
+.menuOption:hover {
+  background-color: var(--color-hover-4);
+}
+
+.menuOption:last-child {
+  border-bottom: 1px solid var(--color-border);
+  border-bottom-right-radius: var(--radius-size-m);
+  border-bottom-left-radius: var(--radius-size-m);
+}
+
+/* Ensure the dropdown menu has proper z-index and shadow */
+.menu {
+  margin-top: -1px; /* To prevent double border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 var(--radius-size-m) var(--radius-size-m);
+  overflow: hidden;
+}

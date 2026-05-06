@@ -1,0 +1,17 @@
+.link {
+  cursor: pointer;
+  color: #fff;
+  font-size: var(--font-size-l);
+}
+
+@media screen and (max-width: 1279px) {
+  .link {
+    font-size: var(--font-size-m);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .link {
+    font-size: var(--font-size-s);
+  }
+}

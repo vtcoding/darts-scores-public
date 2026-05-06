@@ -1,0 +1,84 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 4px;
+  background-color: var(--color-background-3);
+  padding: var(--gap-4);
+  touch-action: none;
+  color: #fff;
+  font-size: var(--font-size-m);
+  user-select: none;
+  text-align: center;
+  -webkit-touch-callout: none;
+  width: 100%;
+  -webkit-user-select: none;
+}
+
+.button.large {
+  padding: var(--gap-6);
+}
+
+.green {
+  background-color: var(--color-green);
+}
+
+.red {
+  background-color: var(--color-red);
+}
+
+.outline {
+  border: 1px solid var(--color-text);
+  background: transparent;
+  color: var(--color-text);
+}
+
+.outline:not(.disabled):not(.selected):hover {
+  cursor: pointer;
+  background: var(--color-hover-2);
+}
+
+.button.disabled {
+  opacity: var(--opacity-disabled);
+  cursor: default;
+}
+
+.selected {
+  opacity: var(--opacity-selected);
+}
+
+.button:not(.disabled):not(.selected):hover {
+  cursor: pointer;
+  background-color: var(--color-hover-3);
+}
+
+.button.green:not(.disabled):not(.selected):hover {
+  cursor: pointer;
+  background-color: var(--color-green-hover);
+}
+
+.button.red:not(.disabled):not(.selected):hover {
+  cursor: pointer;
+  background-color: var(--color-red-hover);
+}
+
+@media screen and (max-width: 1279px) {
+  .button {
+    font-size: var(--font-size-s);
+  }
+
+  .button.large {
+    padding: var(--gap-6) 0;
+  }
+}
+
+@media screen and (max-width: 676px) {
+  .button {
+    font-size: var(--font-size-xs);
+  }
+
+  .button.large {
+    padding: var(--gap-5) 0;
+  }
+}

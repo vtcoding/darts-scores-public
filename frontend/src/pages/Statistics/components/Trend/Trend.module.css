@@ -1,0 +1,38 @@
+/* Dropdowns container */
+.dropdowns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--gap-4);
+}
+
+/* Individual dropdown container */
+.dropdown {
+  display: grid;
+  gap: var(--gap-3);
+}
+
+/* Chart container */
+.chartContainer {
+  margin-top: var(--gap-4);
+  min-height: 300px;
+}
+
+/* Loading container */
+.loadingContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 50px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 767px) {
+  .dropdowns {
+    grid-template-columns: 1fr;
+  }
+
+  .chartContainer {
+    min-height: 250px;
+  }
+}

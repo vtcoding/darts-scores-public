@@ -1,0 +1,27 @@
+.title {
+  margin: 0;
+  background: linear-gradient(135deg, #fff, #f0f0f0);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: var(--font-size-l);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.01em;
+  position: relative;
+  z-index: 1;
+}
+
+/* Tablet and below */
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: var(--font-size-m);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .title {
+    font-size: var(--font-size-s);
+  }
+}

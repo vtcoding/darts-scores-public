@@ -1,0 +1,53 @@
+.heading {
+  margin: 0 0 var(--gap-4) 0;
+  color: var(--color-text);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+}
+
+.level1 {
+  font-weight: 700;
+  font-size: var(--font-size-xl);
+  letter-spacing: -0.02em;
+}
+
+.level2 {
+  font-weight: 600;
+  font-size: var(--font-size-l);
+  letter-spacing: -0.01em;
+}
+
+.level3 {
+  font-weight: 600;
+  font-size: var(--font-size-m);
+}
+
+/* Tablet and below */
+@media screen and (max-width: 1024px) {
+  .level1 {
+    font-size: var(--font-size-l);
+  }
+
+  .level2 {
+    font-size: var(--font-size-m);
+  }
+
+  .level3 {
+    font-size: var(--font-size-s);
+  }
+}
+
+/* Mobile */
+@media screen and (max-width: 640px) {
+  .level1 {
+    font-size: var(--font-size-m);
+  }
+
+  .level2 {
+    font-size: var(--font-size-s);
+  }
+
+  .level3 {
+    font-size: var(--font-size-xs);
+  }
+}

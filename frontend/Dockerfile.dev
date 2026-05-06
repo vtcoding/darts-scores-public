@@ -1,0 +1,22 @@
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install pnpm
+RUN npm install -g pnpm
+
+# Copy only package files first for better layer caching
+COPY package.json .
+
+# Install dependencies
+RUN pnpm install
+
+# Copy the rest of the application
+COPY . .
+
+# Set proper permissions
+RUN chown -R node:node /app
+USER node
+
+# Run dev server
+CMD ["sh", "-c", "pnpm dev --host 0.0.0.0"]

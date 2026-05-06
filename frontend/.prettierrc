@@ -1,0 +1,28 @@
+{
+  "plugins": ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-css-order"],
+  "importOrder": ["^react$", "^@?\\w", "^[./]"],
+  "importOrderSeparation": true,
+  "importOrderSortSpecifiers": true,
+  "semi": true,
+  "singleQuote": false,
+  "printWidth": 100,
+  "tabWidth": 2,
+  "trailingComma": "es5",
+  "cssOrder": "alphabetical",
+  "overrides": [
+    {
+      "files": "*.css",
+      "options": {
+        "parser": "css",
+        "cssOrder": "alphabetical"
+      }
+    },
+    {
+      "files": "*.module.css",
+      "options": {
+        "parser": "css",
+        "cssOrder": "alphabetical"
+      }
+    }
+  ]
+}

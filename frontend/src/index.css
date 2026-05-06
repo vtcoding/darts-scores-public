@@ -1,0 +1,66 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /*** Style variables ***/
+  /* Font sizes - Base (mobile-first) */
+  --font-size-xxs: 0.75rem; /* 12px */
+  --font-size-xs: 0.875rem; /* 14px */
+  --font-size-s: 1rem; /* 16px */
+  --font-size-m: 1.125rem; /* 18px */
+  --font-size-l: 1.5rem; /* 24px */
+  --font-size-xl: 2rem; /* 32px */
+  --font-size-xxl: 2.5rem; /* 40px */
+  --font-size-xxxl: 3rem; /* 48px */
+  --font-size-xxxxl: 3.5rem;
+  --font-size-xxxxxl: 4rem;
+  --font-size-xxxxxxl: 5rem;
+  --font-size-xxxxxxxl: 6rem;
+
+  /* Line heights */
+  --line-height-tight: 1.2;
+  --line-height-normal: 1.5;
+  --line-height-loose: 1.7;
+
+  /* Colors */
+  --color-text: #fff;
+  --color-background-1: #2d1b3d; /* Lighter purple base background */
+  --color-background-2: #3d2858; /* Slightly lighter purple */
+  --color-background-3: #4d3573; /* For elevated surfaces */
+  --color-background-4: #5d428e; /* For hover states and active elements */
+  --color-header-bg: #3d2858; /* Matches background-2 for header */
+  --color-hover-1: #4d3573; /* Hover state for base elements */
+  --color-hover-2: #5d428e; /* Hover state for elevated elements */
+  --color-hover-3: #6d4fa9; /* Hover state for active elements */
+  --color-hover-4: #7d5cc4; /* Hover state for highlighted elements */
+  --color-green: #b19cd9; /* Lighter purple for primary actions */
+  --color-green-hover: #9b84d1; /* Slightly darker purple for hover */
+  --color-red: #e74c3c;
+  --color-red-hover: #c0392b; /* Slightly darker red for hover */
+  --color-blue: #7b68ee; /* Medium slate blue that complements purple */
+  --color-blue-hover: #6a5acd; /* Darker slate blue for hover */
+  --color-border: #6b4c8a; /* Lighter purple border for better contrast */
+
+  /* Radius sizes */
+  --radius-size-s: 2px;
+  --radius-size-m: 4px;
+  --radius-size-full: 100%;
+
+  /* Gaps */
+  --gap-1: 2px;
+  --gap-2: 4px;
+  --gap-3: 8px;
+  --gap-4: 16px;
+  --gap-5: 20px;
+  --gap-6: 24px;
+  --gap-7: 32px;
+
+  /* Opacities */
+  --opacity-disabled: 0.4;
+  --opacity-selected: 0.5;
+  --opacity-hover: 0.9;
+}

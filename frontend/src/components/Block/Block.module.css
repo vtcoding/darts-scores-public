@@ -1,0 +1,66 @@
+.block {
+  display: grid;
+  grid-auto-rows: min-content;
+  row-gap: var(--gap-4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-size-m);
+  background: linear-gradient(135deg, var(--color-background-3), rgba(93, 66, 142, 0.9));
+  padding: var(--gap-5);
+  height: 100%;
+  color: var(--color-text);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  position: relative;
+}
+
+.block::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.02) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.block.clickable {
+  cursor: pointer;
+}
+
+.block.clickable:hover {
+  transform: translateY(-4px) scale(1.02);
+  background: linear-gradient(135deg, rgba(93, 66, 142, 0.95), rgba(109, 79, 169, 0.95));
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.block.clickable:active {
+  transform: translateY(-2px) scale(1.01);
+  transition: all 0.1s ease;
+}
+
+.block.disabled {
+  transform: none !important;
+  opacity: var(--opacity-disabled);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Adjust padding for smaller screens */
+@media screen and (max-width: 1024px) {
+  .block {
+    padding: var(--gap-4);
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .block {
+    padding: var(--gap-3);
+  }
+  
+  .block.clickable:hover {
+    transform: translateY(-2px) scale(1.01);
+  }
+}

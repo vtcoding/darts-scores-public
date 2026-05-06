@@ -1,3 +1,5 @@
+# Public version of darts-scores, no production related code
+
 # Install instructions
 
 1. Download Docker

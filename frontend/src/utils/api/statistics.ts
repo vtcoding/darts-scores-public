@@ -8,10 +8,11 @@ const fetchGeneralStats = async (): Promise<any> => {
   return res.json();
 };
 
-export const useGeneralStats = () => {
+export const useGeneralStats = (enabled: boolean) => {
   return useQuery<GeneralStats>({
     queryKey: ["generalStats"],
-    queryFn: fetchGeneralStats
+    queryFn: fetchGeneralStats,
+    enabled
   });
 };
 

@@ -20,7 +20,7 @@ const Home = () => {
   const offlineMode = localStorage.getItem("offlineMode") === "true";
   const username = localStorage.getItem("username") || t("common.guest");
 
-  const {data: generalStats, isLoading} = useGeneralStats();
+  const {data: generalStats, isLoading} = useGeneralStats(!offlineMode);
 
   return (
     <FadeIn>

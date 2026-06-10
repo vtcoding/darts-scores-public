@@ -48,7 +48,6 @@ const Match = () => {
     { key: "clear", name: t("pages.match.clear") },
   ];
 
-  //const legLength = matchSettings.mode;
   const legLength = matchSettings.mode;
   const legs = matchSettings.legs;
 
@@ -59,9 +58,6 @@ const Match = () => {
   const [doublesModalVisible, setDoublesModalVisible] = useState(false);
   const [matchFinishedModalVisible, setMatchFinishedModalVisible] = useState(false);
 
-  /* ------------------------------------------------------------------ */
-  /* Derived helpers (MUST be above effects)                             */
-  /* ------------------------------------------------------------------ */
 
   const getNextPlayerId = (playerId: number): number => {
     const index = matchSettings.players.findIndex((p: Player) => p.id === playerId);
@@ -90,14 +86,11 @@ const Match = () => {
 
   const currentPlayerId = getCurrentPlayer();
 
-  /* ------------------------------------------------------------------ */
-  /* Bot auto-play                                                      */
-  /* ------------------------------------------------------------------ */
-
+  // Bot autoplay
   useEffect(() => {
     if (doublesModalVisible || matchFinishedModalVisible) return;
 
-    // 🚫 Prevent bot auto-play immediately after undo
+    // Prevent bot auto-play immediately after undo
     if (lastActionWasUndo) {
       setLastActionWasUndo(false);
       return;
@@ -110,10 +103,8 @@ const Match = () => {
     }
   }, [turns, doublesModalVisible, matchFinishedModalVisible]);
 
-  /* ------------------------------------------------------------------ */
-  /* Input handlers                                                     */
-  /* ------------------------------------------------------------------ */
-
+ 
+  // Input handlers
   const validateInput = (value: string) => {
     if (!value) {
       setInput("");
@@ -136,10 +127,7 @@ const Match = () => {
     }
   };
 
-  /* ------------------------------------------------------------------ */
-  /* Turn submission                                                    */
-  /* ------------------------------------------------------------------ */
-
+  // Turn submission
   const submitTurn = (action: string) => {
     setSubmitAction(action);
 
@@ -179,6 +167,7 @@ const Match = () => {
     });
   };
 
+  // Handle double submission after double modal
   const handleDoubleSubmit = (dartsUsedOnDouble: number) => {
     setDoublesModalVisible(false);
 
@@ -217,10 +206,7 @@ const Match = () => {
     }
   };
 
-  /* ------------------------------------------------------------------ */
-  /* Bot turn                                                           */
-  /* ------------------------------------------------------------------ */
-
+  // Bot turn
   const handleBotTurn = (botId: number) => {
     const bot = matchSettings.players.find((p: Player) => p.id === botId);
     if (!bot) return;
@@ -260,10 +246,7 @@ const Match = () => {
     }
   };
 
-  /* ------------------------------------------------------------------ */
-  /* Undo                                                               */
-  /* ------------------------------------------------------------------ */
-
+  // Undo
   const undoTurn = () => {
     if (turns.length === 0) return;
 
@@ -284,20 +267,13 @@ const Match = () => {
     });
   };
 
-  /* ------------------------------------------------------------------ */
-  /* Restart                                                            */
-  /* ------------------------------------------------------------------ */
-
+  // Restart match
   const playAgain = () => {
     saveNewMatchToStorage(legLength, legs, matchSettings.players);
     setMatchFinishedModalVisible(false);
     setTurns([]);
     setInput("");
   };
-
-  /* ------------------------------------------------------------------ */
-  /* Render                                                             */
-  /* ------------------------------------------------------------------ */
 
   return (
     <FadeIn>

@@ -210,7 +210,6 @@
   transform: rotate(45deg);
 }
 
-/* Responsive adjustments */
 @media screen and (min-width: 480px) {
   .modeAndLegs {
     grid-template-columns: 1fr 1fr;

@@ -48,7 +48,7 @@
   /* Radius sizes */
   --radius-size-s: 2px;
   --radius-size-m: 4px;
-  --radius-size-full: 100%;
+  --radius-size-full: 50%;
 
   /* Gaps */
   --gap-1: 2px;

@@ -65,7 +65,6 @@ const Home = () => {
               }}
               text={t("common.login")}
               variant="outline"
-              className={styles.logInButton}
             />
           </Block>
         )}
